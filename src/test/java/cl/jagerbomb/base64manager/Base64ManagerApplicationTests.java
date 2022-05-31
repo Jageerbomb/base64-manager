@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
+
 class Base64ManagerApplicationTests {
 
     @Autowired
@@ -13,7 +14,12 @@ class Base64ManagerApplicationTests {
 
     @Test
     void encodeStringToBase64() {
-        base64Service.encodeStringToBase64("Texto que pasara a Base 64");
+        String base64 = base64Service.encodeStringToBase64("Texto que pasara a Base 64");
     }
 
+    @Test
+    void decodeBase64ToString() {
+        String base64 = base64Service.encodeStringToBase64("Texto que pasara a Base 64");
+        String text = base64Service.decodeBase64ToString(base64);
+    }
 }

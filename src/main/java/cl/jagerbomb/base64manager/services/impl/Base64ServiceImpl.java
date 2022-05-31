@@ -14,7 +14,6 @@ public class Base64ServiceImpl implements Base64Service {
 
     @Override
     public String decodeBase64ToString(String base64) {
-
-        return null;
+        return new String(Base64Utils.decodeBase64ToByte(base64));
     }
 }
