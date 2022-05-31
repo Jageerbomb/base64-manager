@@ -20,7 +20,7 @@ public class Base64Controller {
     public ResponseEntity<?> encodeStringToBase64(@RequestParam("toEncode") String toEncode) {
         Map<String, Object> map = new HashMap<>();
         try {
-            String base64 = base64Service.encodeUrlToBase64(toEncode);
+            String base64 = base64Service.encodeStringToBase64(toEncode);
             map.put("response", base64);
         } catch (Exception e) {
             e.printStackTrace();

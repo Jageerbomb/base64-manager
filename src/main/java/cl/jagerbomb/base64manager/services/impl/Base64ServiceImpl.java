@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 public class Base64ServiceImpl implements Base64Service {
 
     @Override
-    public String encodeUrlToBase64(String toEncode) {
+    public String encodeStringToBase64(String toEncode) {
         return Base64Utils.encodeStringToBase64(toEncode);
     }
 

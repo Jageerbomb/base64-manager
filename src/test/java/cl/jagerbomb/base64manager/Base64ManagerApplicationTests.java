@@ -1,6 +1,6 @@
 package cl.jagerbomb.base64manager;
 
-import cl.jagerbomb.base64manager.controllers.Base64Controller;
+import cl.jagerbomb.base64manager.services.Base64Service;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -9,11 +9,11 @@ import org.springframework.boot.test.context.SpringBootTest;
 class Base64ManagerApplicationTests {
 
     @Autowired
-    private Base64Controller base64Controller;
+    private Base64Service base64Service;
 
     @Test
     void encodeStringToBase64() {
-        base64Controller.encodeStringToBase64("hola");
+        base64Service.encodeStringToBase64("Texto que pasara a Base 64");
     }
 
 }
